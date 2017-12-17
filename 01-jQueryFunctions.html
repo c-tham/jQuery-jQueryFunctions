@@ -1,0 +1,296 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>jQuery - jQuery Functions</title>
+     <link rel="stylesheet" href="styles.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script>
+         $(document).ready(function(){
+             $("#button-click").click(function() {
+                 alert( "You have click the click button." );
+             });
+             $("#button-hide").click(function() {
+                 $( "#action-hide p" ).hide( "slow" );
+             });
+             $("#button-show").click(function() {
+                 $( "#action-show p" ).show( "slow" );
+             });
+             $("#button-toggle").click(function() {
+                 $( "#action-toggle p" ).toggle( "slow" );
+             });
+             $("#button-slideDown").click(function() {
+                 $( "#action-slideDown p" ).slideDown( "slow" );
+             });
+             $("#button-slideUp").click(function() {
+                 $( "#action-slideUp p" ).slideUp();
+             });
+             $("#button-slideToggle").click(function() {
+                 $( "#action-slideToggle p" ).slideToggle( "slow" );
+             });
+             $("#button-fadeIn").click(function() {
+                 $( "#action-fadeIn p" ).fadeIn( "slow" );
+             });
+             $("#button-fadeOut").click(function() {
+                 $( "#action-fadeOut p" ).fadeOut( "slow" );
+             });
+             $("#button-addClass").click(function() {
+                 $( "#action-addClass p" ).addClass( "selected highlight" );
+             });
+             $("#button-before").click(function() {
+                 $( "#action-before p" ).before( "<b><i>Welcome</i></b>" );
+             });
+             $("#button-after").click(function() {
+                 $( "#action-after p" ).after( "<b><i>ByeBye!</i></b>" );
+             });
+             $("#button-append").click(function() {
+                 $( "#action-append p" ).append( "<b><i>Okay!</i></b>" );
+             });
+             $("#button-html").click(function() {
+                 $( "#action-html p" ).html( "<b><i>Hello!</i></b> I am replacing the html paragraph." );
+             });
+             $("#button-attr").click(function() {
+                 $( "#action-attr p" ).attr( "#action-attr span" );
+                 $( "#action-attr span" ).addClass( "selected highlight" );
+             });
+             $( "#action-val span" ).addClass( "selected highlight" );
+             $("#button-val").click(function() {
+                 $( "#action-val p" ).val( "#action-attr span" );
+                 $( "#action-val span" ).text( "Hello" );
+             });
+             $( "#action-text span" ).addClass( "selected highlight" );
+             $("#button-text").click(function() {
+                 $( "#action-text p" ).val( "#action-text span" );
+                 $( "#action-text span" ).text( "<b>byebye!</b>" );
+             });
+             $( "#action-data span" ).addClass( "selected highlight" );
+             $("#button-data").click(function() {
+                 $( "#action-data" ).data( "number", 123456789 );
+                 $( "#action-data span" ).text( $( "#action-data" ).data("number"));
+             });
+         });
+     </script>
+ </head>
+ <body>
+     <div id="wrapper">
+         <div class="functionGroup">
+             <div class="leftSide">
+                 <button id="button-click">click</button>
+             </div>
+             <div class="rightSide">
+                 <h1>01. jQuery .click</h1>
+                 <h3>Click the button to pop-up alert message.</h3>
+                 <div id="action-click">
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat similique porro in quos, eos ullam fugit error ipsum repudiandae doloremque nam nesciunt ab nobis, eaque magnam minima corporis sequi numquam.</p>
+                 </div>
+             </div>
+         </div>
+         <div class="functionGroup">
+             <div class="leftSide">
+                 <button id="button-hide">hide</button>
+             </div>
+             <div class="rightSide">
+                 <h1>02. jQuery .hide</h1>
+                 <h3>Click the button to hide the paragraph.</h3>
+                 <div id="action-hide">
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat similique porro in quos, eos ullam fugit error ipsum repudiandae doloremque nam nesciunt ab nobis, eaque magnam minima corporis sequi numquam.</p>
+                 </div>
+             </div>
+         </div>
+         <div class="functionGroup">
+             <div class="leftSide">
+                 <button id="button-show">show</button>
+             </div>
+             <div class="rightSide">
+                 <h1>03. jQuery .show</h1>
+                 <h3>Click the button to show new paragraph.</h3>
+                 <div id="action-show">
+                     <p style="display: none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat similique porro in quos, eos ullam fugit error ipsum repudiandae doloremque nam nesciunt ab nobis, eaque magnam minima corporis sequi numquam.</p>
+                 </div>
+             </div>
+         </div>
+         <div class="functionGroup">
+             <div class="leftSide">
+                 <button id="button-toggle">toggle</button>
+             </div>
+             <div class="rightSide">
+                 <h1>04. jQuery .toggle</h1>
+                 <h3>Click the button to hide or show the paragraph.</h3>
+                 <div id="action-toggle">
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat similique porro in quos, eos ullam fugit error ipsum repudiandae doloremque nam nesciunt ab nobis, eaque magnam minima corporis sequi numquam.</p>
+                 </div>
+             </div>
+         </div>
+         <div class="functionGroup">
+             <div class="leftSide">
+                 <button id="button-slideDown">slideDown</button>
+             </div>
+             <div class="rightSide">
+                 <h1>05. jQuery .slideDown</h1>
+                 <h3>Click the button to slide down the paragraph.</h3>
+                 <div id="action-slideDown">
+                     <p style="display: none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat similique porro in quos, eos ullam fugit error ipsum repudiandae doloremque nam nesciunt ab nobis, eaque magnam minima corporis sequi numquam.</p>
+                 </div>
+             </div>
+         </div>
+         <div class="functionGroup">
+             <div class="leftSide">
+                 <button id="button-slideUp">slideUp</button>
+             </div>
+             <div class="rightSide">
+                 <h1>06. jQuery .slideUp</h1>
+                 <h3>Click the button to slide up the paragraph.</h3>
+                 <div id="action-slideUp">
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat similique porro in quos, eos ullam fugit error ipsum repudiandae doloremque nam nesciunt ab nobis, eaque magnam minima corporis sequi numquam.</p>
+                 </div>
+             </div>
+         </div>
+         <div class="functionGroup">
+             <div class="leftSide">
+                 <button id="button-slideToggle">slideToggle</button>
+             </div>
+             <div class="rightSide">
+                 <h1>07. jQuery .slideToggle</h1>
+                 <h3>Click the button to hide or show the paragraph.</h3>
+                 <div id="action-slideToggle">
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat similique porro in quos, eos ullam fugit error ipsum repudiandae doloremque nam nesciunt ab nobis, eaque magnam minima corporis sequi numquam.</p>
+                 </div>
+             </div>
+         </div>
+         <div class="functionGroup">
+             <div class="leftSide">
+                 <button id="button-fadeIn">fadeIn</button>
+             </div>
+             <div class="rightSide">
+                 <h1>08. jQuery .fadeIn</h1>
+                 <h3>Click the button to fade in the paragraph.</h3>
+                 <div id="action-fadeIn">
+                     <p style="display: none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat similique porro in quos, eos ullam fugit error ipsum repudiandae doloremque nam nesciunt ab nobis, eaque magnam minima corporis sequi numquam.</p>
+                 </div>
+             </div>
+         </div>
+         <div class="functionGroup">
+             <div class="leftSide">
+                 <button id="button-fadeOut">fadeOut</button>
+             </div>
+             <div class="rightSide">
+                 <h1>09. jQuery .fadeOut</h1>
+                 <h3>Click the button to fade out the paragraph.</h3>
+                 <div id="action-fadeOut">
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat similique porro in quos, eos ullam fugit error ipsum repudiandae doloremque nam nesciunt ab nobis, eaque magnam minima corporis sequi numquam.</p>
+                 </div>
+             </div>
+         </div>
+         <div class="functionGroup">
+             <div class="leftSide">
+                 <button id="button-addClass">addClass</button>
+             </div>
+             <div class="rightSide">
+                 <h1>10. jQuery .addClass</h1>
+                 <h3>Click the button to add class to the paragraph.</h3>
+                 <div id="action-addClass">
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat similique porro in quos, eos ullam fugit error ipsum repudiandae doloremque nam nesciunt ab nobis, eaque magnam minima corporis sequi numquam.</p>
+                 </div>
+             </div>
+         </div>
+         <div class="functionGroup">
+             <div class="leftSide">
+                 <button id="button-before">before</button>
+             </div>
+             <div class="rightSide">
+                 <h1>11. jQuery .before</h1>
+                 <h3>Click the button to add text before the paragraph.</h3>
+                 <div id="action-before">
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat similique porro in quos, eos ullam fugit error ipsum repudiandae doloremque nam nesciunt ab nobis, eaque magnam minima corporis sequi numquam.</p>
+                 </div>
+             </div>
+         </div>
+         <div class="functionGroup">
+             <div class="leftSide">
+                 <button id="button-after">after</button>
+             </div>
+             <div class="rightSide">
+                 <h1>12. jQuery .after</h1>
+                 <h3>Click the button to add text after the paragraph.</h3>
+                 <div id="action-after">
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat similique porro in quos, eos ullam fugit error ipsum repudiandae doloremque nam nesciunt ab nobis, eaque magnam minima corporis sequi numquam.</p>
+                 </div>
+             </div>
+         </div>
+         <div class="functionGroup">
+             <div class="leftSide">
+                 <button id="button-append">append</button>
+             </div>
+             <div class="rightSide">
+                 <h1>13. jQuery .append</h1>
+                 <h3>Click the button to append to end of the paragraph.</h3>
+                 <div id="action-append">
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat similique porro in quos, eos ullam fugit error ipsum repudiandae doloremque nam nesciunt ab nobis, eaque magnam minima corporis sequi numquam.</p>
+                 </div>
+             </div>
+         </div>
+         <div class="functionGroup">
+             <div class="leftSide">
+                 <button id="button-html">html</button>
+             </div>
+             <div class="rightSide">
+                 <h1>14. jQuery .html</h1>
+                 <h3>Click the button to set new HTML of the paragraph.</h3>
+                 <div id="action-html">
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat similique porro in quos, eos ullam fugit error ipsum repudiandae doloremque nam nesciunt ab nobis, eaque magnam minima corporis sequi numquam.</p>
+                 </div>
+             </div>
+         </div>
+         <div class="functionGroup">
+             <div class="leftSide">
+                 <button id="button-attr">attr</button>
+             </div>
+             <div class="rightSide">
+                 <h1>15. jQuery .attr</h1>
+                 <h3>Click the button to get the value of an attribute and set the attributes.</h3>
+                 <div id="action-attr">
+                     <p>Lorem ipsum <span>HereIsThis</span> sit amet consectetur adipisicing elit. Fugiat similique porro in quos, eos ullam <span>HereIsThat</span> fugit error ipsum repudiandae doloremque nam nesciunt ab nobis, eaque magnam minima corporis sequi numquam.</p>
+                 </div>
+             </div>
+         </div>
+         <div class="functionGroup">
+             <div class="leftSide">
+                 <button id="button-val">val</button>
+             </div>
+             <div class="rightSide">
+                 <h1>16. jQuery .val</h1>
+                 <h3>Click the button to get the value and set the value in the paragraph.</h3>
+                 <div id="action-val">
+                     <p>Lorem ipsum dolor sit <span>Bye</span> amet consectetur adipisicing elit. Fugiat similique porro in quos, eos ullam <span>Bye</span> fugit error ipsum repudiandae doloremque <span>Bye</span> nam nesciunt ab nobis, eaque magnam minima corporis sequi numquam.</p>
+                 </div>
+             </div>
+         </div>
+         <div class="functionGroup">
+             <div class="leftSide">
+                 <button id="button-text">text</button>
+             </div>
+             <div class="rightSide">
+                 <h1>17. jQuery .text</h1>
+                 <h3>Click the button to get the text value and set the text value in the paragraph.</h3>
+                 <div id="action-text">
+                     <p>Lorem ipsum dolor sit amet consectetur <span>HELLO</span> adipisicing elit. Fugiat <span>HELLO</span> similique porro in quos, eos ullam fugit error ipsum repudiandae doloremque nam nesciunt <span>HELLO</span> ab nobis, eaque magnam minima<span>HELLO</span> corporis sequi numquam.</p>
+                 </div>
+             </div>
+         </div>
+         <div class="functionGroup">
+             <div class="leftSide">
+                 <button id="button-data">data</button>
+             </div>
+             <div class="rightSide">
+                 <h1>18. jQuery .data</h1>
+                 <h3>Click the button to store data and return the value to the paragraph.</h3>
+                 <div id="action-data">
+                     <p>Lorem <span>_</span> dolor sit amet consectetur adipisicing elit. Fugiat similique <span>_</span> porro in quos, eos ullam <span>_</span> fugit error ipsum repudiandae <span>_</span> doloremque nam nesciunt ab nobis, eaque <span>_</span> magnam minima corporis sequi numquam.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
